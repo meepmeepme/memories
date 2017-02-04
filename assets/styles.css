@@ -1,0 +1,19 @@
+body{
+  font-style: verdana;
+  background-image: url();
+}
+.card{
+  height: 600px;
+  width: 800px;
+  display: inline-block;
+  background-image: url(http://cdn.notonthehighstreet.com/system/product_images/images/001/020/980/original_owl-greeting-card.jpg);
+}
+
+@keyframes rotatey{
+  from{
+    transform: rotateY(0deg);
+  }
+  to{
+    transform: rotateY(360deg);
+  }
+}
