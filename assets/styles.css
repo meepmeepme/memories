@@ -1,12 +1,51 @@
 body{
   font-style: verdana;
-  background-image: url();
+  background-image: url(http://bit.ly/2k0f1zZ);
 }
+
+#container{
+  background-image: url(http://bit.ly/2llYKWS);
+  width: 805px;
+}
+
 .card{
-  height: 600px;
-  width: 800px;
+  height: 360px;
+  width: 400px;
   display: inline-block;
-  background-image: url(http://cdn.notonthehighstreet.com/system/product_images/images/001/020/980/original_owl-greeting-card.jpg);
+  animation-iteration-count: infinite;
+  animation-duration: 60s;
+  background-color: tan;
+}
+#zero{
+  animation-iteration-count: 1;
+  animation-duration: 5s;
+}
+#one{
+  animation-iteration-count: 1;
+  animation-duration: 5s;
+}
+#two{
+  animation-iteration-count: 1;
+  animation-duration: 5s;
+}
+#three{
+  animation-iteration-count: 1;
+  animation-duration: 5s;
+}
+@keyframes fader{
+  from{
+    opacity: 1;
+  }
+  to{
+    opacity: 0;
+  }
+}
+
+
+@keyframes fade{
+  0%{background-color: tan;}
+  50%{background-color: red;}
+  100%{background-color: tan;}
 }
 
 @keyframes rotatey{
