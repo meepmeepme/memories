@@ -12,25 +12,46 @@ body{
   height: 360px;
   width: 400px;
   display: inline-block;
-  animation-iteration-count: infinite;
-  animation-duration: 60s;
+  animation-duration: 2s;
   background-color: tan;
+  animation-fill-mode: forwards;
 }
 #zero{
   animation-iteration-count: 1;
-  animation-duration: 5s;
+  animation-duration: 2s;
+  animation-delay: 2s;
 }
 #one{
   animation-iteration-count: 1;
-  animation-duration: 5s;
+  animation-duration: 2s;
+  animation-delay: 2s;
 }
 #two{
   animation-iteration-count: 1;
-  animation-duration: 5s;
+  animation-duration: 2s;
+  animation-delay: 2s;
 }
 #three{
   animation-iteration-count: 1;
-  animation-duration: 5s;
+  animation-duration: 2s;
+  animation-delay: 2s;
+}
+
+@keyframes red{
+  from{
+    background-color: tan;
+  }
+  to{
+    background-color: red;
+  }
+}
+@keyframes green{
+  from{
+    background-color: tan;
+  }
+  to{
+    background-color: green;
+  }
 }
 @keyframes fader{
   from{

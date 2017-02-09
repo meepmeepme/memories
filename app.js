@@ -14,9 +14,14 @@ function randomize(arg) {
 	 		one ++;
 		}else if(storage === 2 && two < 2){
 			two ++;
-		}	else{
+		}	else if (cards[i] === 2) {
 			cards[i] = 1;
+		}else if (cards[i] === 1) {
+			cards[i] = 2;
+		}else{
+			console.log("eror")
 		}
+		
 	}
 	console.log(cards[0] + " " + cards[1] + " " + cards[2] + " " + cards[3]);
 }
@@ -33,7 +38,12 @@ function flip(save) {
 		console.log(sade[0] + " is the value of the card")
 		console.log(cards[save] + " is the value of the card, but coming from the original array")
 		console.log(cach[0] + " is the id of the card that was chosen")
-		document.getElementById(save).style.backgrounColor = "red";
+		if (cach[0] = 1) {
+			document.getElementById(save).style.animationName = "red";
+		}else{
+			document.getElementById(save).style.animationName = "green";
+		}
+		
 		console.log('hey')
 		//this saves the second card.
 
@@ -42,11 +52,10 @@ function flip(save) {
 		sade[1] = cards[save];
 		cach[1] = save;
 		console.log("ran");
-		document.getElementById(save).style.backgroundColor = "red";
+		document.getElementById(save).style.animationName = "red";
 		//checks if match is made
 
-		if (sade[0] == sade[1]) {
-
+		if (sade[0] === sade[1]) {
 			console.log("mach!");
 			console.log(cach[1] + " " + cach[0]);
 			document.getElementById(cach[0]).style.animationName = "fader";
