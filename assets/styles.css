@@ -16,22 +16,22 @@ body{
   background-color: tan;
   animation-fill-mode: forwards;
 }
-#zero{
+#0{
   animation-iteration-count: 1;
   animation-duration: 2s;
   animation-delay: 2s;
 }
-#one{
+#1{
   animation-iteration-count: 1;
   animation-duration: 2s;
   animation-delay: 2s;
 }
-#two{
+#2{
   animation-iteration-count: 1;
   animation-duration: 2s;
   animation-delay: 2s;
 }
-#three{
+#3{
   animation-iteration-count: 1;
   animation-duration: 2s;
   animation-delay: 2s;
@@ -45,7 +45,23 @@ body{
     background-color: red;
   }
 }
-@keyframes green{
+@keyframes renji{
+  from{
+    background-color: red;
+  }
+  to{
+    background-color: tan;
+  }
+}
+@keyframes grenji{
+  from{
+    background-color: green;
+  }
+  to{
+    background-color: tan;
+  }
+}
+@keyframes gren{
   from{
     background-color: tan;
   }
@@ -63,10 +79,13 @@ body{
 }
 
 
-@keyframes fade{
-  0%{background-color: tan;}
-  50%{background-color: red;}
-  100%{background-color: tan;}
+@keyframes tan{
+  from{
+    background-color: red;
+  }
+  to{
+    background-color: tan;
+  }
 }
 
 @keyframes rotatey{

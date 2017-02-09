@@ -1,9 +1,9 @@
-var cards = [0,1,2,3];
+var cards = [1,2,3,4];
 var one = 0;
 var two = 0;
 var stage = 0;
 var sade =[0,0];
-var cach = ["save","save"];
+var cach = [0,0];
 
 //On load, this function assigns either the value of 1 or 2 to the 4 squares.
 function randomize(arg) {
@@ -35,16 +35,10 @@ function flip(save) {
 		stage++;
 		sade[0] = cards[save];
 		cach[0] = save;
-		console.log(sade[0] + " is the value of the card")
-		console.log(cards[save] + " is the value of the card, but coming from the original array")
-		console.log(cach[0] + " is the id of the card that was chosen")
-		if (cach[0] = 1) {
-			document.getElementById(save).style.animationName = "red";
-		}else{
-			document.getElementById(save).style.animationName = "green";
-		}
-		
-		console.log('hey')
+		console.log(sade[0] + " is the value of the card");
+		console.log(cards[save] + " is the value of the card, but coming from the original array");
+		console.log(cach[0] + " is the id of the card that was chosen");
+		checker(save);
 		//this saves the second card.
 
 	}else{
@@ -52,7 +46,7 @@ function flip(save) {
 		sade[1] = cards[save];
 		cach[1] = save;
 		console.log("ran");
-		document.getElementById(save).style.animationName = "red";
+		checker(save)
 		//checks if match is made
 
 		if (sade[0] === sade[1]) {
@@ -63,11 +57,25 @@ function flip(save) {
 		}
 		//if the match is not made, then the colors change back to tan
 		else{
-			document.getElementById(cach[0]).style.backgroundColor = "tan";
-			document.getElementById(cach[1]).style.backgroundColor = "tan";
+			checkerji(sade[0]);
+			checkerji(sade[1]);
 
 		}
 		//if match is not made, life goes on
 	}
 
+}
+function checker(save) {
+	if (cards[save] === 1) {
+		document.getElementById(save).style.animationName = "red";
+	}else if (cards[save] === 2) {
+		document.getElementById(save).style.animationName = "gren";
+	}
+}
+function checkerji(save) {
+	if (cards[save] === 1) {
+		document.getElementById(save).style.animationName = "renji";
+	}else if (cards[save] === 2) {
+		document.getElementById(save).style.animationName = "grenji";
+	}
 }
