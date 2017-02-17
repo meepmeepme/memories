@@ -1,98 +1,26 @@
-body{
-  font-style: verdana;
-  background-image: url(http://bit.ly/2k0f1zZ);
-}
-
 #container{
-  background-image: url(http://bit.ly/2llYKWS);
-  width: 805px;
+  display: flex;
+  flex-wrap: wrap;
+  width:720px;
+  height:720px; 
+  background-image: url(http://bit.ly/2lZskSL);
 }
-
-.card{
-  height: 360px;
-  width: 400px;
-  display: inline-block;
-  animation-duration: 2s;
-  background-color: tan;
-  animation-fill-mode: forwards;
+.cards{
+  background-size: 180px 180px;
+  background-image: url(http://bit.ly/2kPl0IR);
+  width: 50%;
+  height: 50%;
 }
-#0{
-  animation-iteration-count: 1;
-  animation-duration: 2s;
-  animation-delay: 2s;
+#zero:hover {
+  animation: flip 3s infinite;
 }
-#1{
-  animation-iteration-count: 1;
-  animation-duration: 2s;
-  animation-delay: 2s;
+@-webkit-keyframes breathe{
+  0% {font-size: 24px; color: green;}
+  50% {font-size: 48px; color:red;}
+  100% {font-size: 24px; color:green;}
 }
-#2{
-  animation-iteration-count: 1;
-  animation-duration: 2s;
-  animation-delay: 2s;
-}
-#3{
-  animation-iteration-count: 1;
-  animation-duration: 2s;
-  animation-delay: 2s;
-}
-
-@keyframes red{
-  from{
-    background-color: tan;
-  }
-  to{
-    background-color: red;
-  }
-}
-@keyframes renji{
-  from{
-    background-color: red;
-  }
-  to{
-    background-color: tan;
-  }
-}
-@keyframes grenji{
-  from{
-    background-color: green;
-  }
-  to{
-    background-color: tan;
-  }
-}
-@keyframes gren{
-  from{
-    background-color: tan;
-  }
-  to{
-    background-color: green;
-  }
-}
-@keyframes fader{
-  from{
-    opacity: 1;
-  }
-  to{
-    opacity: 0;
-  }
-}
-
-
-@keyframes tan{
-  from{
-    background-color: red;
-  }
-  to{
-    background-color: tan;
-  }
-}
-
-@keyframes rotatey{
-  from{
-    transform: rotateY(0deg);
-  }
-  to{
-    transform: rotateY(360deg);
-  }
+@-webkit-keyframes flip{
+  0%{transform: rotateY(0deg);}
+  50%{transform: rotateY(180deg);}
+  100%{transform: rotateY(0deg);}
 }

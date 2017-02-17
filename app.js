@@ -1,81 +1,27 @@
-var cards = [1,2,3,4];
-var one = 0;
-var two = 0;
-var stage = 0;
-var sade =[0,0];
-var cach = [0,0];
+var cardvalueoneortwo = [0,0,0,0]
+	//line 3 sets the number of iterations of the randomizer, aka how many cards need to be given values.
 
-//On load, this function assigns either the value of 1 or 2 to the 4 squares.
-function randomize(arg) {
-	for (var i = 0; i < 4; i++) {
-		cards[i] = Math.floor(Math.random() * 2) + 1;
-		var storage = cards[i];
+function randomize() {
+	// body...
+
+for (var i = 0; i < cardvalueoneortwo.length; i++) {
+	var one = 0;
+	var two = 0;
+	//line 6 creates and assigns the random values to the cards.
+	cardvalueoneortwo[i] = Math.floor(Math.random()*2)+1
+	//this stores the values of the cards and tallies them, to prevent them from derping.
+	var storage = cardvalueoneortwo[i];
 		if(storage === 1 && one < 2 ){
 	 		one ++;
-		}else if(storage === 2 && two < 2){
+		}else if(storage === 2 && two < 2 ){
 			two ++;
-		}	else if (cards[i] === 2) {
+		}	else if (cardvalueoneortwo[i] === 2) {
 			cards[i] = 1;
-		}else if (cards[i] === 1) {
+		}else if (cardvalueoneortwo[i] === 1) {
 			cards[i] = 2;
 		}else{
-			console.log("eror")
+			console.log("error with card generation");
 		}
-		
-	}
-	console.log(cards[0] + " " + cards[1] + " " + cards[2] + " " + cards[3]);
+		console.log(cardvalueoneortwo[0] + " " + cardvalueoneortwo[1] + " " + cardvalueoneortwo[2] + " " + cardvalueoneortwo[3]);
 }
-
-//this function is called upon when a square is clicked. The parameter is the id number.
-
-function flip(save) {
-
-	//this checks which stage the computer is at, and saves the card which was clicked. it also turns the card green for a moment
-	if (stage === 0) {
-		stage++;
-		sade[0] = cards[save];
-		cach[0] = save;
-		console.log(sade[0] + " is the value of the card");
-		console.log(cards[save] + " is the value of the card, but coming from the original array");
-		console.log(cach[0] + " is the id of the card that was chosen");
-		checker(save);
-		//this saves the second card.
-
-	}else{
-		stage = 0;
-		sade[1] = cards[save];
-		cach[1] = save;
-		console.log("ran");
-		checker(save)
-		//checks if match is made
-
-		if (sade[0] === sade[1]) {
-			console.log("mach!");
-			console.log(cach[1] + " " + cach[0]);
-			document.getElementById(cach[0]).style.animationName = "fader";
-			document.getElementById(cach[1]).style.animationName = "fader";
-		}
-		//if the match is not made, then the colors change back to tan
-		else{
-			checkerji(sade[0]);
-			checkerji(sade[1]);
-
-		}
-		//if match is not made, life goes on
-	}
-
-}
-function checker(save) {
-	if (cards[save] === 1) {
-		document.getElementById(save).style.animationName = "red";
-	}else if (cards[save] === 2) {
-		document.getElementById(save).style.animationName = "gren";
-	}
-}
-function checkerji(save) {
-	if (cards[save] === 1) {
-		document.getElementById(save).style.animationName = "renji";
-	}else if (cards[save] === 2) {
-		document.getElementById(save).style.animationName = "grenji";
-	}
 }
